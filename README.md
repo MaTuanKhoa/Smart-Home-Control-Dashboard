@@ -21,7 +21,8 @@ Use Grid + StackLayout / VerticalStackLayout
 |-----------------------------------------------| 
 |  Weather Card (Temp, Icon, Status)    | 
 |-----------------------------------------------| 
-Device Control Cards (2 x 2 Grid)                                                                                                                                                                             | - Light
+Device Control Cards (2 x 2 Grid)                                                                                                                                                                             
+| - Light
 | - Fan
 | - Air Conditioner
 | - Security
