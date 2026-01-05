@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="project_MAUI.MainPage"
+    BackgroundColor="#F0F6FB"
+    Padding="20"
+    Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="18">
+
+            <!-- 1) HEADER -->
+            <Label Text="Smart Home Dashboard"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   TextColor="#0F1722" />
+
+            <!-- 2) WEATHER CARD -->
+            <Frame CornerRadius="18"
+                   Padding="16"
+                   HasShadow="True">
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#6A5DFF" Offset="0.0" />
+                        <GradientStop Color="#4B2BFF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="12" VerticalOptions="Center">
+
+                    <!-- Icon -->
+                    <Frame Grid.Column="0"
+                           WidthRequest="52"
+                           HeightRequest="52"
+                           CornerRadius="14"
+                           Padding="10"
+                           BackgroundColor="White"
+                           HasShadow="False"
+                           VerticalOptions="Center">
+                        <!-- Đổi icon theo bạn có -->
+                        <Image Source="weather.png" Aspect="AspectFit" />
+                    </Frame>
+
+                    <!-- Text -->
+                    <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                        <Label Text="Today Weather"
+                               FontSize="12"
+                               TextColor="#EAEFFF" />
+                        <Label Text="Sunny • Comfortable"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="White" />
+                    </VerticalStackLayout>
+
+                    <!-- Temp -->
+                    <VerticalStackLayout Grid.Column="2" Spacing="2" VerticalOptions="Center" HorizontalOptions="End">
+                        <Label Text="24°C"
+                               FontSize="22"
+                               FontAttributes="Bold"
+                               TextColor="White"
+                               HorizontalOptions="End" />
+                        <Label Text="Perfect"
+                               FontSize="12"
+                               TextColor="#EAEFFF"
+                               HorizontalOptions="End" />
+                    </VerticalStackLayout>
+
+                </Grid>
+            </Frame>
+
+            <!-- 3) DEVICE CONTROL CARDS (2 x 2 GRID) -->
+            <Label Text="Device Control"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#0F1722" />
+
+            <Grid RowDefinitions="Auto,Auto"
+                  ColumnDefinitions="*,*"
+                  RowSpacing="12"
+                  ColumnSpacing="12">
+
+                <!-- Light -->
+                <Frame Grid.Row="0" Grid.Column="0"
+                       CornerRadius="16"
+                       Padding="14"
+                       HasShadow="True"
+                       BackgroundColor="White">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10" VerticalOptions="Center">
+                        <Frame Grid.Column="0"
+                               WidthRequest="44"
+                               HeightRequest="44"
+                               CornerRadius="12"
+                               Padding="10"
+                               BackgroundColor="#F6F8FA"
+                               HasShadow="False">
+                            <Image Source="light_icon.png" Aspect="AspectFit" />
+                        </Frame>
+
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Light" FontAttributes="Bold" TextColor="#0F1722" />
+                            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Label Text="Living Room" FontSize="12" TextColor="#7B8790" />
+                                <Switch IsToggled="True" OnColor="#77A6FF" ThumbColor="White" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Fan -->
+                <Frame Grid.Row="0" Grid.Column="1"
+                       CornerRadius="16"
+                       Padding="14"
+                       HasShadow="True"
+                       BackgroundColor="White">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10" VerticalOptions="Center">
+                        <Frame Grid.Column="0"
+                               WidthRequest="44"
+                               HeightRequest="44"
+                               CornerRadius="12"
+                               Padding="10"
+                               BackgroundColor="#F6F8FA"
+                               HasShadow="False">
+                            <Image Source="fan_icon.png" Aspect="AspectFit" />
+                        </Frame>
+
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Fan" FontAttributes="Bold" TextColor="#0F1722" />
+                            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Label Text="Study Room" FontSize="12" TextColor="#7B8790" />
+                                <Switch IsToggled="False" OnColor="#77A6FF" ThumbColor="White" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Air Conditioner -->
+                <Frame Grid.Row="1" Grid.Column="0"
+                       CornerRadius="16"
+                       Padding="14"
+                       HasShadow="True"
+                       BackgroundColor="White">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10" VerticalOptions="Center">
+                        <Frame Grid.Column="0"
+                               WidthRequest="44"
+                               HeightRequest="44"
+                               CornerRadius="12"
+                               Padding="10"
+                               BackgroundColor="#F6F8FA"
+                               HasShadow="False">
+                            <Image Source="ac_icon.png" Aspect="AspectFit" />
+                        </Frame>
+
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Air Conditioner" FontAttributes="Bold" TextColor="#0F1722" />
+                            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Label Text="Bedroom" FontSize="12" TextColor="#7B8790" />
+                                <Switch IsToggled="False" OnColor="#77A6FF" ThumbColor="White" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+                <!-- Security -->
+                <Frame Grid.Row="1" Grid.Column="1"
+                       CornerRadius="16"
+                       Padding="14"
+                       HasShadow="True"
+                       BackgroundColor="White">
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10" VerticalOptions="Center">
+                        <Frame Grid.Column="0"
+                               WidthRequest="44"
+                               HeightRequest="44"
+                               CornerRadius="12"
+                               Padding="10"
+                               BackgroundColor="#F6F8FA"
+                               HasShadow="False">
+                            <Image Source="shield.png" Aspect="AspectFit" />
+                        </Frame>
+
+                        <VerticalStackLayout Grid.Column="1" Spacing="2" VerticalOptions="Center">
+                            <Label Text="Security" FontAttributes="Bold" TextColor="#0F1722" />
+                            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                <Label Text="Armed" FontSize="12" TextColor="#7B8790" />
+                                <Switch IsToggled="True" OnColor="#77A6FF" ThumbColor="White" />
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Grid>
+                </Frame>
+
+            </Grid>
+
+            <!-- 4) ENERGY USAGE SUMMARY -->
+            <Frame CornerRadius="16"
+                   Padding="16"
+                   HasShadow="True"
+                   BackgroundColor="White">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Energy Usage Summary"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#0F1722" />
+
+                    <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                        <Label Grid.Column="0"
+                               Text="Today's Energy Usage"
+                               FontSize="13"
+                               TextColor="#7B8790" />
+                        <Label Grid.Column="1"
+                               Text="68%"
+                               FontAttributes="Bold"
+                               TextColor="#0F1722" />
+                    </Grid>
+
+                    <ProgressBar Progress="0.68" HeightRequest="10" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
