@@ -85,10 +85,10 @@ Expected Deliverables
   - Responsive layout (works on phone & tablet) 
 Time Breakdown (3 Hours) 
 Task Time
-  - Layout skeleton (Grid + sections)   45 min 
-  - Device cards UI                     60 min
-  - Styling & spacing                   45 min 
-  - Polish & alignment                  30 min 
+  -- Layout skeleton (Grid + sections)   45 min 
+  -- Device cards UI                     60 min
+  -- Styling & spacing                   45 min 
+  -- Polish & alignment                  30 min 
 Learning Outcomes 
   - After completing this project, the student will be able to:
   - Design a complex single-page UI in MAUI 
