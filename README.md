@@ -49,7 +49,7 @@ XAML concepts practiced:
   - Image + Label alignment 
 
 4. Device Control Cards (Main Focus) 
-Create 4 reusable UI cards, each with:
++ Create 4 reusable UI cards, each with:
   - Icon 
   - Device name 
   - Status label (ON / OFF) 
@@ -64,32 +64,32 @@ XAML concepts practiced:
 5. Energy Usage Summary
   - ProgressBar (e.g. “Today’s Energy Usage”) 
   - Percentage label 
-XAML concepts practiced: 
++ XAML concepts practiced: 
   - ProgressBar
   - Label alignment
   - StackLayout spacing 
-Styling Requirements
++ Styling Requirements
   - Use ResourceDictionary for: 
-    o Colors 
-    o Font sizes 
+    * Colors 
+    * Font sizes 
   - Define: 
-    o Primary color 
-    o Secondary color 
-XAML concepts practiced:
+    * Primary color 
+    * Secondary color 
++ XAML concepts practiced:
   - StaticResource 
   - Consistent theming 
-Expected Deliverables
++ Expected Deliverables
   - MainPage.xaml 
   - MainPage.xaml.cs (empty or minimal) 
   - Clean, readable XAML 
   - Responsive layout (works on phone & tablet) 
-Time Breakdown (3 Hours) 
++ Time Breakdown (3 Hours) 
 Task Time
-  + Layout skeleton (Grid + sections)   45 min 
-  + Device cards UI                     60 min
-  + Styling & spacing                   45 min 
-  + Polish & alignment                  30 min 
-Learning Outcomes 
+  - Layout skeleton (Grid + sections)   45 min 
+  - Device cards UI                     60 min
+  - Styling & spacing                   45 min 
+  - Polish & alignment                  30 min 
++ Learning Outcomes 
   - After completing this project, the student will be able to:
   - Design a complex single-page UI in MAUI 
   - Use Grid effectively 
