@@ -1,4 +1,4 @@
-# Smart-Home-Control-Dashboard
+# Smart-Home-Control-Dashboard (Live-share Coding)
 .NET MAUI Project
 
 Project Title 
